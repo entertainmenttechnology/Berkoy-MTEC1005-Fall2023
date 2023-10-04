@@ -17,12 +17,12 @@ void setup() {
 
 // loop function runs infinitely
 void loop() {
-  for (int i = 0 ; i <= 255; i += 5) { // for loop fades LED value from 0 to 255, incrementing by 1
+  for (int i = 0 ; i <= 255; i += 1) { // for loop fades LED value from 0 to 255, incrementing by 1
     analogWrite(LED, i); //writes value of i to pin
     delay(50);  // short delay so LED effect is visible
   }
 
-  for (int i = 255 ; i >= 0; i -= 5) { // for loop fades LED value from 255 to 0, de-incrementing by 1
+  for (int i = 255 ; i >= 0; i -= 1) { // for loop fades LED value from 255 to 0, de-incrementing by 1
     analogWrite(LED, i);
     delay(30);
   }
