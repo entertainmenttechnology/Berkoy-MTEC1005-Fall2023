@@ -18,7 +18,7 @@ void setup() {
   // note: no need to initialize pinMode for analog pins as they can only be inputs
 
   // initialize serial communication at 9600 bits per second:
-  Serial.begin(9600);
+  //Serial.begin(9600);
 }
 
 // loop function runs infinitely
@@ -29,8 +29,7 @@ void loop() {
 
   if (value > 0 && value <= 200) {
     analogWrite (LED, 255);
-  } 
-  else if (value > 200 && value < 255) {
+  } else if (value > 200 && value < 255) {
     analogWrite (LED, 255);
     delay (1000);
     analogWrite (LED, 0);
@@ -38,5 +37,5 @@ void loop() {
   } else {
     analogWrite (LED, 0);
   }
-  Serial.println(value); //Prints to serial monitor
+  //Serial.println(value); //Prints to serial monitor
 }
